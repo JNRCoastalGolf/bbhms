@@ -3,154 +3,272 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Beach Better Have My Sunny</title>
+<title>Beach Better Have My Sunny | Myrtle Beach Stay</title>
 
 <style>
-  body {
-    margin: 0;
+  :root{
+    --teal:#00bcd4;
+    --deep:#007c91;
+    --dark:#003b46;
+    --bg:#eaf7fb;
+    --card:#ffffff;
+  }
+
+  body{
+    margin:0;
     font-family: Arial, sans-serif;
-    background: #eaf7fb;
-    color: #003b46;
+    background:var(--bg);
+    color:var(--dark);
   }
 
-  header {
-    background: linear-gradient(to bottom, #00bcd4, #007c91);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+  /* HERO */
+  .hero{
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:90px 20px;
   }
 
-  header h1 {
-    margin: 0;
-    font-size: 2.2em;
+  .hero h1{
+    font-size:2.6em;
+    margin:0;
   }
 
-  header p {
-    margin-top: 10px;
-    font-size: 1.1em;
+  .hero p{
+    font-size:1.2em;
+    margin-top:10px;
+    opacity:0.95;
   }
 
-  .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 18px;
-    background: white;
-    color: #007c91;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+  .btn{
+    display:inline-block;
+    margin:10px 6px;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
   }
 
-  .section {
-    padding: 25px 20px;
-    max-width: 900px;
-    margin: auto;
+  .btn-primary{
+    background:white;
+    color:var(--deep);
   }
 
-  .card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  .btn-secondary{
+    background:var(--teal);
+    color:white;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+  /* LAYOUT */
+  .container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
   }
 
-  @media(min-width: 700px) {
-    .grid {
-      grid-template-columns: 1fr 1fr;
+  .section{
+    margin:40px 0;
+  }
+
+  h2{
+    margin-bottom:15px;
+  }
+
+  /* CARDS */
+  .grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  @media(min-width:800px){
+    .grid{
+      grid-template-columns:1fr 1fr;
     }
   }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #555;
+  .card{
+    background:var(--card);
+    padding:18px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  }
+
+  .tag{
+    display:inline-block;
+    background:#dff6fb;
+    color:var(--deep);
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:0.8em;
+    margin-bottom:8px;
+  }
+
+  /* CTA BAR */
+  .cta{
+    background:var(--deep);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    border-radius:16px;
+  }
+
+  .cta a{
+    margin-top:10px;
+  }
+
+  footer{
+    text-align:center;
+    padding:30px;
+    font-size:0.85em;
+    color:#666;
+  }
+
+  /* TOP NAV */
+  .nav{
+    position:sticky;
+    top:0;
+    background:white;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:10;
+  }
+
+  .nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:bold;
+    font-size:0.9em;
   }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Beach Better Have My Sunny 🌴</h1>
-  <p>Your Myrtle Beach Stay + Golf + Guide Experience</p>
+<div class="nav">
+  <a href="#stay">Stay</a>
+  <a href="#guide">Guide</a>
+  <a href="#area">Area</a>
+  <a href="#book">Book</a>
+</div>
 
-  <a class="btn" href="https://www.airbnb.com/h/BBHMS" target="_blank">View Airbnb</a>
-  <a class="btn" href="#guide">Guest Guide</a>
+<header class="hero">
+  <h1>Beach Better Have My Sunny 🌴</h1>
+  <p>Myrtle Beach Coastal Stay • Golf • Family • Ocean Vibes</p>
+
+  <a class="btn btn-primary" href="https://www.airbnb.com/h/BBHMS" target="_blank">View Airbnb</a>
+  <a class="btn btn-secondary" href="#guide">Guest Guide</a>
 </header>
 
-<div class="section" id="guide">
+<div class="container">
 
-  <h2>🏡 Welcome Guest Guide</h2>
+  <!-- STAY -->
+  <div class="section" id="stay">
+    <h2>🏡 Your Stay</h2>
 
-  <div class="card">
-    <strong>Check-In Info</strong><br>
-    Add your check-in instructions here (door code, arrival time, etc.)
+    <div class="grid">
+
+      <div class="card">
+        <span class="tag">Highlights</span>
+        <p>3 bed • 2 bath • Sleeps families & groups comfortably with open living space and large TVs.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Location</span>
+        <p>Just 1.5 blocks from the beach with easy access to Myrtle Beach attractions.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Amenities</span>
+        <p>Pool • Hot tub • Tennis • Pickleball • Grills • Outdoor seating</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Perfect For</span>
+        <p>Families • Golf trips • Couples • Beach vacations • Weekend getaways</p>
+      </div>
+
+    </div>
   </div>
 
-  <div class="card">
-    <strong>WiFi</strong><br>
-    Network: YOUR_WIFI_NAME<br>
-    Password: YOUR_PASSWORD
+  <!-- GUIDE -->
+  <div class="section" id="guide">
+    <h2>🧭 Guest Guide</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <strong>📶 WiFi</strong><br>
+        Network: YOUR_WIFI<br>
+        Password: YOUR_PASSWORD
+      </div>
+
+      <div class="card">
+        <strong>🔑 Check-In</strong><br>
+        Add door code + arrival instructions here.
+      </div>
+
+      <div class="card">
+        <strong>🚗 Parking</strong><br>
+        Free parking available on-site. Follow assigned spots.
+      </div>
+
+      <div class="card">
+        <strong>🏖️ Beach Access</strong><br>
+        Short walk (1.5 blocks) straight to the ocean.
+      </div>
+
+    </div>
   </div>
 
-  <div class="card">
-    <strong>Parking</strong><br>
-    Free parking available on-site. Follow posted signs for assigned spaces.
+  <!-- AREA -->
+  <div class="section" id="area">
+    <h2>⛳ Explore Myrtle Beach</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <strong>Golf Courses</strong>
+        <p>World-class courses minutes away for all skill levels.</p>
+      </div>
+
+      <div class="card">
+        <strong>Dining</strong>
+        <p>Seafood, rooftop bars, and local favorites nearby.</p>
+      </div>
+
+      <div class="card">
+        <strong>Family Fun</strong>
+        <p>Boardwalk, amusement parks, and attractions close by.</p>
+      </div>
+
+      <div class="card">
+        <strong>Nightlife</strong>
+        <p>Live music, beach bars, and entertainment districts.</p>
+      </div>
+
+    </div>
   </div>
 
-</div>
-
-<div class="section">
-
-  <h2>🏖️ Things To Do Nearby</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <strong>Golf Courses ⛳</strong><br>
-      Top Myrtle Beach golf just minutes away.
+  <!-- BOOK -->
+  <div class="section" id="book">
+    <div class="cta">
+      <h2>Ready for Your Stay?</h2>
+      <p>Book directly on Airbnb and start your Myrtle Beach experience.</p>
+      <a class="btn btn-primary" href="https://www.airbnb.com/h/BBHMS" target="_blank">Book Now</a>
     </div>
-
-    <div class="card">
-      <strong>Beach Access 🌊</strong><br>
-      1.5 blocks from the beach — easy walk.
-    </div>
-
-    <div class="card">
-      <strong>Family Fun 🎡</strong><br>
-      Near Family Kingdom & boardwalk attractions.
-    </div>
-
-    <div class="card">
-      <strong>Dining 🍤</strong><br>
-      Restaurants, seafood, and nightlife nearby.
-    </div>
-
-  </div>
-
-</div>
-
-<div class="section">
-
-  <h2>⭐ Quick Links</h2>
-
-  <div class="card">
-    <a class="btn" href="https://www.airbnb.com/h/BBHMS" target="_blank">Rebook / Share Listing</a>
-    <a class="btn" href="#guide">House Info</a>
   </div>
 
 </div>
 
 <footer>
-  Hosted by JNR Coastal Properties LLC • Myrtle Beach, SC
+  © JNR Coastal Properties LLC • Myrtle Beach, South Carolina
 </footer>
 
 </body>
