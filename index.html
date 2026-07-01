@@ -1,45 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beach Better Have My Sunny</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #00bcd4, #e0f7fa);
-      color: #003b46;
-      text-align: center;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Beach Better Have My Sunny</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eaf7fb;
+    color: #003b46;
+  }
+
+  header {
+    background: linear-gradient(to bottom, #00bcd4, #007c91);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+
+  header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 18px;
+    background: white;
+    color: #007c91;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .section {
+    padding: 25px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  @media(min-width: 700px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
     }
-    header {
-      padding: 50px 20px;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #007c91;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-  </style>
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
 </head>
+
 <body>
 
 <header>
   <h1>Beach Better Have My Sunny 🌴</h1>
-  <p>Welcome to your Myrtle Beach guide & stay experience</p>
+  <p>Your Myrtle Beach Stay + Golf + Guide Experience</p>
+
   <a class="btn" href="https://www.airbnb.com/h/BBHMS" target="_blank">View Airbnb</a>
+  <a class="btn" href="#guide">Guest Guide</a>
 </header>
+
+<div class="section" id="guide">
+
+  <h2>🏡 Welcome Guest Guide</h2>
+
+  <div class="card">
+    <strong>Check-In Info</strong><br>
+    Add your check-in instructions here (door code, arrival time, etc.)
+  </div>
+
+  <div class="card">
+    <strong>WiFi</strong><br>
+    Network: YOUR_WIFI_NAME<br>
+    Password: YOUR_PASSWORD
+  </div>
+
+  <div class="card">
+    <strong>Parking</strong><br>
+    Free parking available on-site. Follow posted signs for assigned spaces.
+  </div>
+
+</div>
+
+<div class="section">
+
+  <h2>🏖️ Things To Do Nearby</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>Golf Courses ⛳</strong><br>
+      Top Myrtle Beach golf just minutes away.
+    </div>
+
+    <div class="card">
+      <strong>Beach Access 🌊</strong><br>
+      1.5 blocks from the beach — easy walk.
+    </div>
+
+    <div class="card">
+      <strong>Family Fun 🎡</strong><br>
+      Near Family Kingdom & boardwalk attractions.
+    </div>
+
+    <div class="card">
+      <strong>Dining 🍤</strong><br>
+      Restaurants, seafood, and nightlife nearby.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="section">
+
+  <h2>⭐ Quick Links</h2>
+
+  <div class="card">
+    <a class="btn" href="https://www.airbnb.com/h/BBHMS" target="_blank">Rebook / Share Listing</a>
+    <a class="btn" href="#guide">House Info</a>
+  </div>
+
+</div>
+
+<footer>
+  Hosted by JNR Coastal Properties LLC • Myrtle Beach, SC
+</footer>
 
 </body>
 </html>
