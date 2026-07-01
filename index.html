@@ -3,273 +3,290 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Beach Better Have My Sunny | Myrtle Beach Stay</title>
+<title>Beach Better Have My Sunny | Luxury Myrtle Beach Stay</title>
 
 <style>
-  :root{
-    --teal:#00bcd4;
-    --deep:#007c91;
-    --dark:#003b46;
-    --bg:#eaf7fb;
-    --card:#ffffff;
-  }
+:root{
+  --navy:#003b46;
+  --teal:#00bcd4;
+  --glass: rgba(255,255,255,0.85);
+}
 
-  body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:var(--bg);
-    color:var(--dark);
-  }
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  color:var(--navy);
+  background:#f3fbfd;
+}
 
-  /* HERO */
-  .hero{
-    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:90px 20px;
-  }
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80");
+  background-size:cover;
+  background-position:center;
+  padding:20px;
+}
 
-  .hero h1{
-    font-size:2.6em;
-    margin:0;
-  }
+.hero h1{
+  font-size:3em;
+  margin:0;
+}
 
-  .hero p{
-    font-size:1.2em;
-    margin-top:10px;
-    opacity:0.95;
-  }
+.hero p{
+  font-size:1.2em;
+  margin-top:10px;
+  opacity:0.95;
+}
 
-  .btn{
-    display:inline-block;
-    margin:10px 6px;
-    padding:12px 18px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-  }
+.btn{
+  display:inline-block;
+  padding:14px 20px;
+  margin:10px 6px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-  .btn-primary{
-    background:white;
-    color:var(--deep);
-  }
+.btn-primary{
+  background:white;
+  color:var(--navy);
+}
 
-  .btn-secondary{
-    background:var(--teal);
-    color:white;
-  }
+.btn-accent{
+  background:var(--teal);
+  color:white;
+}
 
-  /* LAYOUT */
-  .container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-  }
+/* FLOATING BOOK BAR */
+.bookbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 15px;
+  box-shadow:0 -5px 20px rgba(0,0,0,0.1);
+  z-index:100;
+}
 
-  .section{
-    margin:40px 0;
-  }
+.bookbar a{
+  background:var(--teal);
+  color:white;
+  padding:12px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-  h2{
-    margin-bottom:15px;
-  }
+/* SECTIONS */
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-  /* CARDS */
+h2{
+  font-size:2em;
+  margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:15px;
+}
+
+@media(min-width:900px){
   .grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:15px;
+    grid-template-columns:1fr 1fr;
   }
+}
 
-  @media(min-width:800px){
-    .grid{
-      grid-template-columns:1fr 1fr;
-    }
-  }
+/* GLASS CARDS */
+.card{
+  background:var(--glass);
+  backdrop-filter: blur(10px);
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
 
-  .card{
-    background:var(--card);
-    padding:18px;
-    border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
-  }
+/* CTA */
+.cta{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+  border-radius:20px;
+}
 
-  .tag{
-    display:inline-block;
-    background:#dff6fb;
-    color:var(--deep);
-    padding:4px 10px;
-    border-radius:20px;
-    font-size:0.8em;
-    margin-bottom:8px;
-  }
+.cta a{
+  margin-top:15px;
+}
 
-  /* CTA BAR */
-  .cta{
-    background:var(--deep);
-    color:white;
-    text-align:center;
-    padding:35px 20px;
-    border-radius:16px;
-  }
+.small{
+  opacity:0.85;
+  font-size:0.95em;
+}
 
-  .cta a{
-    margin-top:10px;
-  }
+/* NAV */
+.nav{
+  position:sticky;
+  top:0;
+  background:white;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:12px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+  z-index:10;
+}
 
-  footer{
-    text-align:center;
-    padding:30px;
-    font-size:0.85em;
-    color:#666;
-  }
-
-  /* TOP NAV */
-  .nav{
-    position:sticky;
-    top:0;
-    background:white;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    z-index:10;
-  }
-
-  .nav a{
-    text-decoration:none;
-    color:var(--dark);
-    font-weight:bold;
-    font-size:0.9em;
-  }
+.nav a{
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:bold;
+}
 </style>
 </head>
 
 <body>
 
 <div class="nav">
-  <a href="#stay">Stay</a>
-  <a href="#guide">Guide</a>
-  <a href="#area">Area</a>
+  <a href="#stay">The Residence</a>
+  <a href="#experience">Experience</a>
+  <a href="#guide">Guest Guide</a>
   <a href="#book">Book</a>
 </div>
 
+<!-- HERO -->
 <header class="hero">
-  <h1>Beach Better Have My Sunny 🌴</h1>
-  <p>Myrtle Beach Coastal Stay • Golf • Family • Ocean Vibes</p>
+  <div>
+    <h1>Beach Better Have My Sunny</h1>
+    <p>A Luxury Coastal Escape in Myrtle Beach</p>
 
-  <a class="btn btn-primary" href="https://www.airbnb.com/h/BBHMS" target="_blank">View Airbnb</a>
-  <a class="btn btn-secondary" href="#guide">Guest Guide</a>
+    <a class="btn btn-primary" href="https://www.airbnb.com/h/BBHMS" target="_blank">Book on Airbnb</a>
+    <a class="btn btn-accent" href="#book">Direct Booking Info</a>
+  </div>
 </header>
 
-<div class="container">
+<!-- STAY -->
+<section class="section" id="stay">
+  <h2>The Residence</h2>
 
-  <!-- STAY -->
-  <div class="section" id="stay">
-    <h2>🏡 Your Stay</h2>
+  <div class="grid">
 
-    <div class="grid">
-
-      <div class="card">
-        <span class="tag">Highlights</span>
-        <p>3 bed • 2 bath • Sleeps families & groups comfortably with open living space and large TVs.</p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Location</span>
-        <p>Just 1.5 blocks from the beach with easy access to Myrtle Beach attractions.</p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Amenities</span>
-        <p>Pool • Hot tub • Tennis • Pickleball • Grills • Outdoor seating</p>
-      </div>
-
-      <div class="card">
-        <span class="tag">Perfect For</span>
-        <p>Families • Golf trips • Couples • Beach vacations • Weekend getaways</p>
-      </div>
-
+    <div class="card">
+      <strong>🏡 Coastal Luxury Living</strong>
+      <p>Spacious 3-bedroom, 2-bath retreat designed for comfort, families, and golf getaways.</p>
     </div>
-  </div>
 
-  <!-- GUIDE -->
-  <div class="section" id="guide">
-    <h2>🧭 Guest Guide</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <strong>📶 WiFi</strong><br>
-        Network: YOUR_WIFI<br>
-        Password: YOUR_PASSWORD
-      </div>
-
-      <div class="card">
-        <strong>🔑 Check-In</strong><br>
-        Add door code + arrival instructions here.
-      </div>
-
-      <div class="card">
-        <strong>🚗 Parking</strong><br>
-        Free parking available on-site. Follow assigned spots.
-      </div>
-
-      <div class="card">
-        <strong>🏖️ Beach Access</strong><br>
-        Short walk (1.5 blocks) straight to the ocean.
-      </div>
-
+    <div class="card">
+      <strong>🌊 Prime Location</strong>
+      <p>Just 1.5 blocks from the beach with quick access to Myrtle Beach’s best attractions.</p>
     </div>
-  </div>
 
-  <!-- AREA -->
-  <div class="section" id="area">
-    <h2>⛳ Explore Myrtle Beach</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <strong>Golf Courses</strong>
-        <p>World-class courses minutes away for all skill levels.</p>
-      </div>
-
-      <div class="card">
-        <strong>Dining</strong>
-        <p>Seafood, rooftop bars, and local favorites nearby.</p>
-      </div>
-
-      <div class="card">
-        <strong>Family Fun</strong>
-        <p>Boardwalk, amusement parks, and attractions close by.</p>
-      </div>
-
-      <div class="card">
-        <strong>Nightlife</strong>
-        <p>Live music, beach bars, and entertainment districts.</p>
-      </div>
-
+    <div class="card">
+      <strong>🏊 Resort Amenities</strong>
+      <p>Pool • Hot tub • Tennis • Pickleball • Grilling stations • Outdoor lounge areas</p>
     </div>
-  </div>
 
-  <!-- BOOK -->
-  <div class="section" id="book">
-    <div class="cta">
-      <h2>Ready for Your Stay?</h2>
-      <p>Book directly on Airbnb and start your Myrtle Beach experience.</p>
-      <a class="btn btn-primary" href="https://www.airbnb.com/h/BBHMS" target="_blank">Book Now</a>
+    <div class="card">
+      <strong>⛳ Built for Golf Trips</strong>
+      <p>Minutes from championship courses across the Grand Strand.</p>
     </div>
-  </div>
 
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <h2>The Experience</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>🌴 Morning Beach Walks</strong>
+      <p>Start your day just steps from the ocean breeze and sand.</p>
+    </div>
+
+    <div class="card">
+      <strong>🍤 Dining & Nightlife</strong>
+      <p>Seafood, rooftop bars, and entertainment minutes away.</p>
+    </div>
+
+    <div class="card">
+      <strong>🎡 Family Attractions</strong>
+      <p>Boardwalk, Family Kingdom, and local attractions nearby.</p>
+    </div>
+
+    <div class="card">
+      <strong>🔥 Relax & Recharge</strong>
+      <p>Private, quiet, and designed for stress-free coastal living.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="section" id="guide">
+  <h2>Guest Essentials</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>WiFi</strong><br>
+      Network: YOUR_WIFI<br>
+      Password: YOUR_PASSWORD
+    </div>
+
+    <div class="card">
+      <strong>Check-In</strong><br>
+      Add smart lock / door code instructions here.
+    </div>
+
+    <div class="card">
+      <strong>Parking</strong><br>
+      Complimentary on-site parking included.
+    </div>
+
+    <div class="card">
+      <strong>Beach Access</strong><br>
+      Short, easy walk (1.5 blocks) to the shoreline.
+    </div>
+
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="section" id="book">
+  <div class="cta">
+    <h2>Reserve Your Stay</h2>
+    <p class="small">
+      Book instantly through Airbnb or future direct booking options.
+    </p>
+
+    <a class="btn btn-primary" href="https://www.airbnb.com/h/BBHMS" target="_blank">Book Now</a>
+  </div>
+</section>
+
+<!-- FLOATING BAR -->
+<div class="bookbar">
+  <div><strong>Beach Better Have My Sunny</strong></div>
+  <a href="https://www.airbnb.com/h/BBHMS" target="_blank">Check Availability</a>
 </div>
-
-<footer>
-  © JNR Coastal Properties LLC • Myrtle Beach, South Carolina
-</footer>
 
 </body>
 </html>
